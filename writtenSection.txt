@@ -55,7 +55,7 @@ Answer each question in a written format
 
 8. How does prototype work?
 	the best example I can think of is Array.push() this is accessible to all arrays, through the array Object. 
-	the advantage of prototypes is that they are not created on every single array object, but each array has 	access to the prototype
+	the advantage of prototypes is that they are not created on every single array object, but each array has access to the prototype
 
 	
 
@@ -71,7 +71,9 @@ The controller manipulates the model, and the model updates the view.
 	when it is mounted, it is born. When it is unmounted it is dead. 
 
 	there are lifecycle methods that are commonly used in react.
-	one of the most commonly used is component
+	one of the most commonly used is componentDidMount() 
+	this will fire when the component is mounted after the render method. you can use this to fire off 
+	functions when you enter the page. 
  	
 
 11. What is REST?
@@ -82,23 +84,33 @@ A restful api will have its endpoints structured as such
 
 12. Name three ways of getting data from the URL using express
 
+you can get data from the url using the params attached to the url, 
+you can use a query on the url,
+and you can send an object in the body of the request.
+
 create table users (
 id serial,
 name varchar(255),
 email varchar(255)
 )
 
-12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
+13. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 
 -Get all users:
+
+
 Select * from users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+
+
 Insert into users(name, email)
 values(‘your name’, ‘fake@fake.com’)
 
 -Update the newly created user's name to 'Bobby Boy':
+
+
 Update users set name=‘Bobby Boy’
 Where users.name = ‘ your name’
 
