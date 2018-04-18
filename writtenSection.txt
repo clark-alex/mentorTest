@@ -1,26 +1,84 @@
+Mentor test
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+ 
+	semantic HTML is the use of HTML elements in a way that makes you code more readable.
+
+	for example a <p> tag indicates that the text is a paragraph and anyone Is going to know what is enclosed in that element
+
 
 2. What is the box model?
+	
+	The box model defines each element as being its own box with nested boxes that help with the sizing/spacing of an element.
+
+	The layers from inner to outer are as follows
+	
+	Content, is where the content lives
+	padding, pushes out and is invisible
+	border is a border around the padding
+	margin pushes other elements away
 
 3. What is the difference between IDs and Classes?
 
+	IDs are more specific and  will select just one element are signified by a # in css and will overrule classes 
+
+	classes are less specific and can be used for many elements
+
+
+
 4. What does the z-index do?
+	z-index is how you can properly manage the layering of elements. 
+	z-index only works with a position property
 
 5. Summarize what the keyword 'this' is used for?
+	this is a reserved word in js and is used to describe context. 
+	this is used in implicit context is defined by what ever is to the left of the invocation of the function.
+	default context is when this === window
+	
+	 
 
 6. What is a callback?
+	a callback is a when the parameter of a function is a function.
+	higher order functions take in a callback
+	for example filter
 
 7. What is a closure?
+	a function in a function that returns a function
+	for example if you have a sheep pen function that creates a sheep pen array, and returns an add sheep f	unction you can call that inner function as much as you want
+
+	when a closure is invoked, the inner function will take a snapshot of itself and its parents all the way up 	the tree. This will give it access to manipulate the variables stored within the closure
+
+	closures can help us keep our data secure.
+	closures can help make multiple copies 
+	remembering data in for loops
 
 8. How does prototype work?
+	the best example I can think of is Array.push() this is accessible to all arrays, through the array Object. 
+	the advantage of prototypes is that they are not created on every single array object, but each array has 	access to the prototype
+
+	
 
 9. What is MVC?
+	Model View Controller is a design pattern.
+	
+	a simple explanation of the MVC is  When a user inputs some data, the data goes to the controller, 
+The controller manipulates the model, and the model updates the view.
+	
 
 10. What is the component lifecycle?
+	the component life cycle is the life of a component on the window. 
+	when it is mounted, it is born. When it is unmounted it is dead. 
+
+	there are lifecycle methods that are commonly used in react.
+	one of the most commonly used is component
+ 	
 
 11. What is REST?
+Representational state transfer
+Rest is a pattern of formatting urls
+Post, put, get, delete. 
+A restful api will have its endpoints structured as such
 
 12. Name three ways of getting data from the URL using express
 
@@ -32,10 +90,19 @@ email varchar(255)
 
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
+
 -Get all users:
+Select * from users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+Insert into users(name, email)
+values(‘your name’, ‘fake@fake.com’)
 
 -Update the newly created user's name to 'Bobby Boy':
+Update users set name=‘Bobby Boy’
+Where users.name = ‘ your name’
+
 
 -Delete the newly updated user:
+Delete from users where user.name = ‘Bobby Boy’
+›
